@@ -1,3 +1,3 @@
 class Destination < ApplicationRecord
-  
+
 end
