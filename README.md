@@ -24,7 +24,7 @@ Blogger:
 2. Users should be able to see the profile page of a blogger. On this page, a user should see:
 	- The total likes on all of that blogger's posts
 	- A link to that blogger's featured post (the post with the most likes)
-	- **BONUS** A list of that users top 5 most written about destinations (the destinations with the most posts)
+	- **BONUS** A list of that user's top 5 most written about destinations (the destinations with the most posts)
 
 Destination:
 
@@ -38,7 +38,8 @@ Post:
 1. Users should be able to create and edit a post
 	- Users should be able to select a blogger from a dropdown menu
 	- Users should be able to select a destination from a dropdown menu
-	- A post should be have a title and content longer than 100 characters
+	- A post should have a title
+	- A post should have content longer than 100 characters
 2. Users should be able to see a post's page with its title and content displayed. On this page, a user should see:
 	- A link to the page of that post's author
 	- A link to the page of that post's destination
