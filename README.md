@@ -6,7 +6,7 @@ Our founder - a world renowned ice-cream-eating contest champion, gourmet hot-do
 
 ## Instructions
 
-Our vision has already begun! We've created migrations and a seed file for you to begin the execution of our vision! Just run `rake db:setup`!
+Our vision has already begun! We've created migrations and a seed file for you to begin the execution of our vision! Create the associations within your models, then run `rake db:setup`!
 
 ## Deliverables
 
