@@ -1,78 +1,83 @@
 <div>
+<h3>
 Turns:
 <% i = 1 %>
 <% @teller.each do |t|%>
 <%= i.to_s + ". " + t.username + "," %>
 <% i = i + 1%>
 <% end %> make sure your turn is correct. 
+</h3>
 </div>
+
+
+<br>
 <div>
 Teller <%= @teller[0].username %>:
 <%= form_for @s1 do |f|%>
-Once upon a time, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[0].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+Once upon a time, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[0].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[1].username %>:
 <%= form_for @s2 do |f|%>
-Every day, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[1].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+Every day, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[1].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[2].username %>:
 <%= form_for @s3 do |f|%>
-One day, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[2].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+One day, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[2].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[3].username %>:
 <%= form_for @s4 do |f|%>
-Because of that, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[3].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+Because of that, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[3].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[4].username %>:
 <%= form_for @s5 do |f|%>
-Because of that, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[4].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+Because of that, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[4].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[5].username %>:
 <%= form_for @s6 do |f|%>
-Until finally, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[5].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+Until finally, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[5].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[6].username %>:
 <%= form_for @s7 do |f|%>
-In conclusion, <%= f.text_field :sentence_text %><br>
-<%= hidden_field_tag :story_id, @story.id %><br>
-<%= hidden_field_tag :teller_id, @teller[6].id %><br>
-<%= hidden_field_tag :t_id, @team_id %><br>
+In conclusion, <%= f.text_field :content %><br>
+<%= hidden_field_tag :story_id, @story.id %>
+<%= hidden_field_tag :teller_id, @teller[6].id %>
+<%= hidden_field_tag :t_id, @team_id %>
 
 <%= f.submit %><br>
 <%end%><br>
