@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Travelatr</title>
+    <title>StoryTelling</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <header class='clearfix'>
+  <div class="nav">
+      <%= link_to "Home", stories_path %>
+      <%= link_to "Create Story", new_team_path %>
+      <%= link_to "Profile", login_path %>
+  </div>
+</header>
+
+
 
   <body>
     <%= yield %>

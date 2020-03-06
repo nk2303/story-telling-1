@@ -1,0 +1,22 @@
+<h1>Who wanna join?</h1>
+<div>*the story can be as lame as possible lol !*</div>
+<div>First, create a team ranging from two tellers to seven tellers.</div><br />
+<div>
+
+<%= form_for @story do |f|%>
+Select tellers: <br><br>
+<%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username %><br>
+<br>
+<%= f.submit %><br>
+<%end%> <br>
+
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+</div>
+
+Teller not existed? <br>
+
+<%= link_to "New teller sign up", new_teller_path %>

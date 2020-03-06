@@ -1,0 +1,13 @@
+
+<div>
+<%= form_for @teller do |f|%>
+Username (should be unique): <%= f.text_field :username %><br>
+Password: <%= f.text_field :password %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+</div>

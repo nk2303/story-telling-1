@@ -1,0 +1,7 @@
+<div><h1>ALL TELLERS</h1><div>
+
+<% @tellers.each do |teller| %>
+    <li>
+    <%= link_to teller.username, teller %>
+    </li>
+<% end %>

@@ -1,0 +1,19 @@
+
+
+<%= form_for @team do |f|%>
+Select tellers: <br><br>
+<%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username %><br>
+<br>
+<%= f.submit %><br>
+<%end%> <br>
+
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+</div>
+
+Teller not existed? <br>
+
+<%= link_to "New teller sign up", new_teller_path %>

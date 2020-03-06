@@ -1,0 +1,20 @@
+<h1>Login</h1>
+<% if flash[:message]%>
+<p><%= flash[:message] %></p>
+<% end %>
+
+<%= form_tag[sessions_path] do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+  <br>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <br>
+  <%= submit_tag 'Login' %>
+<% end %>
+
+<br><br>
+<div>
+Don't have a teller account?
+<%= link_to "Create a new account", new_teller_path%>
+</div>

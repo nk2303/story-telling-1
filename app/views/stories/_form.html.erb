@@ -1,0 +1,44 @@
+Turns:
+<% i = 1 %>
+<% @random_names.each do |name|%>
+<%= i.to_s + ". " + name + "," %>
+<% i = i + 1%>
+<% end %> now play.
+
+<div>
+<%= form_for @s1 do |f|%>
+Once upon a time, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s2 do |f|%>
+Every day, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s3 do |f|%>
+One day, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s4 do |f|%>
+Because of that, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s5 do |f|%>
+Because of that, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s6 do |f|%>
+Until finally, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+<%= form_for @s7 do |f|%>
+In conclusion, <%= f.text_field :sentence_text %><br>
+<%= f.submit %><br>
+<%end%><br>
+
+</div>
