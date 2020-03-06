@@ -5,6 +5,7 @@ class SentencesController < ApplicationController
 
     def new
         @sentence = Sentence.new
+        
     end
 
     def show
@@ -17,13 +18,11 @@ class SentencesController < ApplicationController
     end
     
     def create
-        @sentence = Sentence.create(sentence_params)
-        if @sentence.valid?
-            redirect_to @sentence
-        else
-            flash[:message] = @sentence.errors.full_messages
-            render :new
-        end
+        sentence_params[:story_id] = params[:story_id]
+        sentence_params[:teller_id] = params[:teller_id]
+        Sentence.create(sentence_params)
+        redirect_to new_story_path(:team_id => params[:t_id])
+        # you want to also pass story_id 
     end
 
     def update
@@ -41,6 +40,6 @@ class SentencesController < ApplicationController
     private
 
     def sentence_params
-        params.require(:sentence).permit(:sentence_text)
+        params.require(:sentence).permit(:sentence_text, :story_id, :teller_id)
     end
 end

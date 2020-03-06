@@ -5,22 +5,31 @@ class StoriesController < ApplicationController
     end
 
     def new
+        # story_id = params[:story_id]
+        #if (story_id  ) {
+        # get all the sentences from teh story.
+        # use those sentences to fill the form. 
+        #
+        #}
+        #else
+        @team_id = params[:team_id]
         @team = Team.find(params[:team_id])
         teller_id_list = @team.id_list.split(",").map { |s| s.to_i } #[1,2,3]
-        teller_names = []
-        teller_id_list.each do |id|
-            teller_names << Teller.find_by_id(id).username
+        random_ids = teller_id_list.shuffle
+        @teller = []
+        random_ids.each do |id|
+            @teller << Teller.find_by_id(id)
         end
-        @random_names = teller_names.shuffle
-        @story = Story.new
         
-        @s1 = Sentence.new(start:"Once upon a time, ", sentence_text: "")
-        @s2 = Sentence.new(start:"Every day, ", sentence_text: "")
-        @s3 = Sentence.new(start:"One day, ", sentence_text: "")
-        @s4 = Sentence.new(start:"Because of that, ", sentence_text: "")
-        @s5 = Sentence.new(start:"Because of that,  ", sentence_text: "")
-        @s6 = Sentence.new(start:"Because of that, ", sentence_text: "")
-        @s7 = Sentence.new(start:"In conclusion, ", sentence_text: "")
+        @story = Story.create
+
+        @s1 = Sentence.new(start:"Once upon a time, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[0])
+        @s2 = Sentence.new(start:"Every day, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[1])
+        @s3 = Sentence.new(start:"One day, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[2])
+        @s4 = Sentence.new(start:"Because of that, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[3])
+        @s5 = Sentence.new(start:"Because of that,  ", sentence_text: "", story_id: @story.id, teller_id: random_ids[4])
+        @s6 = Sentence.new(start:"Until finally, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[5])
+        @s7 = Sentence.new(start:"In conclusion, ", sentence_text: "", story_id: @story.id, teller_id: random_ids[6])
     end
 
     def show
@@ -28,6 +37,7 @@ class StoriesController < ApplicationController
     end
 
     def edit
+
         @story = Story.find(params[:id])
         # TODO: continue writing the logic for the route
     end

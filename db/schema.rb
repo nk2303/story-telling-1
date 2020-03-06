@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20200305225634) do
   end
 
   create_table "sentences", force: :cascade do |t|
+    t.integer "story_id"
+    t.integer "teller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sentence_text"
