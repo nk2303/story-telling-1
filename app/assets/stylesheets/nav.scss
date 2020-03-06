@@ -1,6 +1,8 @@
 header {
-    background: grey;
+    justify-content: space-evenly;
+    background: black;
     padding: 10px;
+    
     ul {
       margin: 0;
       padding: 0;
@@ -11,8 +13,11 @@ header {
       font-weight: bold;
       color: white;
     }
+
   }
   
+  
+
   .left-nav {
     float: left;
   }

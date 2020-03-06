@@ -31,7 +31,7 @@ class GamesController < ApplicationController
         s5 = Sentence.create(start:"Because of that,  ", sentence_text: "")
         s6 = Sentence.create(start:"Because of that, ", sentence_text: "")
         s7 = Sentence.create(start:"In conclusion, ", sentence_text: "")
-        redirect_to new_story_path
+        render new_story_path
         #create a story
         #seven sentences
         #game is going to end up being where my story are

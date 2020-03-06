@@ -18,11 +18,12 @@ class SentencesController < ApplicationController
     end
     
     def create
-        sentence_params[:story_id] = params[:story_id]
-        sentence_params[:teller_id] = params[:teller_id]
+        sentence_params[:story_id] = params[:sentence][:story_id]
+        sentence_params[:teller_id] = params[:sentence][:teller_id]
+        sentence_params[:sentence_text] = params[:sentence][:sentence_text]
+        puts sentence_params
         Sentence.create(sentence_params)
-        redirect_to new_story_path(:team_id => params[:t_id])
-        # you want to also pass story_id 
+        # redirect_to new_story_path(:team_id => params[:t_id])
     end
 
     def update

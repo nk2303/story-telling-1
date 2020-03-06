@@ -9,7 +9,7 @@ class StoriesController < ApplicationController
 
         if story_id
         # get all the sentences from teh story.
-        # use those sentences to fill the form. 
+        # use those senteuhkjnces to fill the form. 
 
         else
             @team_id = params[:team_id]
@@ -47,15 +47,13 @@ class StoriesController < ApplicationController
             end
         end
         @story = Story.create
-        @s1 = Sentence.new(start:"Once upon a time, ", sentence_text: "content", story_id: @story.id, teller_id: @teller[0].id)
-        byebug
-        @s2 = Sentence.new(start:"Every day, ", sentence_text: "a", story_id: @story.id, teller_id: @teller[1].id)
-        byebug
-        @s3 = Sentence.new(start:"One day, ", sentence_text: "a", story_id: @story.id, teller_id: @teller[2].id)
-        @s4 = Sentence.new(start:"Because of that, ", sentence_text: "a", story_id: @story.id, teller_id: @teller[3].id)
-        @s5 = Sentence.new(start:"Because of that,  ", sentence_text: "a", story_id: @story.id, teller_id: @teller[4].id)
-        @s6 = Sentence.new(start:"Until finally, ", sentence_text: "a", story_id: @story.id, teller_id: @teller[5].id)
-        @s7 = Sentence.new(start:"In conclusion, ", sentence_text: "a", story_id: @story.id, teller_id: @teller[6].id)
+        @s1 = Sentence.new(start:"Once upon a time, ", sentence_text: "", story_id: @story.id, teller_id: @teller[0].id)
+        @s2 = Sentence.new(start:"Every day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[1].id)
+        @s3 = Sentence.new(start:"One day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[2].id)
+        @s4 = Sentence.new(start:"Because of that, ", sentence_text: "", story_id: @story.id, teller_id: @teller[3].id)
+        @s5 = Sentence.new(start:"Because of that,  ", sentence_text: "", story_id: @story.id, teller_id: @teller[4].id)
+        @s6 = Sentence.new(start:"Until finally, ", sentence_text: "", story_id: @story.id, teller_id: @teller[5].id)
+        @s7 = Sentence.new(start:"In conclusion, ", sentence_text: "", story_id: @story.id, teller_id: @teller[6].id)
     
     end
 
@@ -81,7 +79,7 @@ class StoriesController < ApplicationController
     private
 
     def story_params
-        params.require(:story).permit(list_of_player, :story_id)
+        params.require(:story).permit(list_of_player)
     end
 
 end
