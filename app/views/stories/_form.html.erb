@@ -5,7 +5,8 @@ Turns:
 <% @teller.each do |t|%>
 <%= i.to_s + ". " + t.username + "," %>
 <% i = i + 1%>
-<% end %> make sure your turn is correct. </h3>
+<% end %> make sure your turn is correct. <br>
+And don't forget to hit "Create Sentence" button everytime a teller finishes a sentence.</h3>
 </div>
 
 <br>
@@ -47,7 +48,6 @@ Because of that, <%= f.text_field :sentence_text %><br>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[3].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
-
 <%= f.submit %><br>
 <%end%><br>
 
@@ -58,7 +58,6 @@ Because of that, <%= f.text_field :sentence_text %><br>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[4].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
-
 <%= f.submit %><br>
 <%end%><br>
 
@@ -79,7 +78,6 @@ In conclusion, <%= f.text_field :sentence_text %><br>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[6].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
-
 <%= f.submit %><br>
 <%end%><br>
 </div>

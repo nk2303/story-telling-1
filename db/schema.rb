@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200305225634) do
 
-  create_table "games", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sentences", force: :cascade do |t|
     t.integer "story_id"
     t.integer "teller_id"
@@ -42,7 +37,6 @@ ActiveRecord::Schema.define(version: 20200305225634) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "game_id"
   end
 
 end
