@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20200305225634) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sentence_text"
-    t.string "start"
+    t.string "sentence_start"
   end
 
   create_table "stories", force: :cascade do |t|

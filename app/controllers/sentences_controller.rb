@@ -4,8 +4,7 @@ class SentencesController < ApplicationController
     end
 
     def new
-        @sentence = Sentence.new
-        
+        @sentence = Sentence.new 
     end
 
     def show
@@ -18,12 +17,11 @@ class SentencesController < ApplicationController
     end
     
     def create
-        sentence_params[:story_id] = params[:sentence][:story_id]
-        sentence_params[:teller_id] = params[:sentence][:teller_id]
-        sentence_params[:sentence_text] = params[:sentence][:sentence_text]
-        puts sentence_params
+        # sentence_params[:story_id] = params[:sentence][:story_id]
+        # sentence_params[:teller_id] = params[:sentence][:teller_id]
+        # sentence_params[:sentence_text] = params[:sentence][:sentence_text]
+        # sentence_params[:sentence_start] = params[:sentence][:sentence_start]
         Sentence.create(sentence_params)
-        # redirect_to new_story_path(:team_id => params[:t_id])
     end
 
     def update
@@ -41,6 +39,6 @@ class SentencesController < ApplicationController
     private
 
     def sentence_params
-        params.require(:sentence).permit(:sentence_text, :story_id, :teller_id)
+        params.require(:sentence).permit(:sentence_text, :story_id, :teller_id, :sentence_start)
     end
 end

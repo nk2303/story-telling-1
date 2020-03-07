@@ -13,6 +13,7 @@ Turns:
 Teller <%= @teller[0].username %>:
 <%= form_for @s1 do |f|%>
 Once upon a time, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "Once upon a time, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[0].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
@@ -22,6 +23,7 @@ Once upon a time, <%= f.text_field :sentence_text %><br>
 Teller <%= @teller[1].username %>:
 <%= form_for @s2 do |f|%>
 Every day, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "Every day, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[1].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
@@ -31,6 +33,7 @@ Every day, <%= f.text_field :sentence_text %><br>
 Teller <%= @teller[2].username %>:
 <%= form_for @s3 do |f|%>
 One day, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "One day, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[2].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
@@ -40,6 +43,7 @@ One day, <%= f.text_field :sentence_text %><br>
 Teller <%= @teller[3].username %>:
 <%= form_for @s4 do |f|%>
 Because of that, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "Because of that, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[3].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
@@ -50,6 +54,7 @@ Because of that, <%= f.text_field :sentence_text %><br>
 Teller <%= @teller[4].username %>:
 <%= form_for @s5 do |f|%>
 Because of that, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "Because of that, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[4].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
@@ -60,16 +65,17 @@ Because of that, <%= f.text_field :sentence_text %><br>
 Teller <%= @teller[5].username %>:
 <%= form_for @s6 do |f|%>
 Until finally, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "Until finally, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[5].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>
-
 <%= f.submit %><br>
 <%end%><br>
 
 Teller <%= @teller[6].username %>:
 <%= form_for @s7 do |f|%>
 In conclusion, <%= f.text_field :sentence_text %><br>
+<%= f.hidden_field(:sentence_start, "In conclusion, " => params[:sentence_start])%>
 <%= f.hidden_field(:story_id, @story.id => params[:story_id])%>
 <%= f.hidden_field(:teller_id, @teller[6].id => params[:teller_id])%>
 <%= hidden_field_tag :t_id, @team_id %>

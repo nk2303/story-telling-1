@@ -47,18 +47,34 @@ class StoriesController < ApplicationController
             end
         end
         @story = Story.create
-        @s1 = Sentence.new(start:"Once upon a time, ", sentence_text: "", story_id: @story.id, teller_id: @teller[0].id)
-        @s2 = Sentence.new(start:"Every day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[1].id)
-        @s3 = Sentence.new(start:"One day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[2].id)
-        @s4 = Sentence.new(start:"Because of that, ", sentence_text: "", story_id: @story.id, teller_id: @teller[3].id)
-        @s5 = Sentence.new(start:"Because of that,  ", sentence_text: "", story_id: @story.id, teller_id: @teller[4].id)
-        @s6 = Sentence.new(start:"Until finally, ", sentence_text: "", story_id: @story.id, teller_id: @teller[5].id)
-        @s7 = Sentence.new(start:"In conclusion, ", sentence_text: "", story_id: @story.id, teller_id: @teller[6].id)
+        @s1 = Sentence.new(sentence_start:"Once upon a time, ", sentence_text: "", story_id: @story.id, teller_id: @teller[0].id)
+        @s2 = Sentence.new(sentence_start:"Every day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[1].id)
+        @s3 = Sentence.new(sentence_start:"One day, ", sentence_text: "", story_id: @story.id, teller_id: @teller[2].id)
+        @s4 = Sentence.new(sentence_start:"Because of that, ", sentence_text: "", story_id: @story.id, teller_id: @teller[3].id)
+        @s5 = Sentence.new(sentence_start:"Because of that, ", sentence_text: "", story_id: @story.id, teller_id: @teller[4].id)
+        @s6 = Sentence.new(sentence_start:"Until finally, ", sentence_text: "", story_id: @story.id, teller_id: @teller[5].id)
+        @s7 = Sentence.new(sentence_start:"In conclusion, ", sentence_text: "", story_id: @story.id, teller_id: @teller[6].id)
     
     end
 
     def show
         @story = Story.find(params[:id])
+        all_s = Sentence.all.select {|sentence| sentence.story_id == @story.id}
+        #return all sentences of the story
+        s1_obj = all_s.find { |s| s.sentence_start == "Once upon a time, "}
+        @s1 = s1_obj.sentence_start + s1_obj.sentence_text
+        s2_obj = all_s.find { |s| s.sentence_start == "Every day, "}
+        @s2 = s2_obj.sentence_start + s2_obj.sentence_text
+        s3_obj = all_s.find { |s| s.sentence_start == "One day, "}
+        @s3 = s3_obj.sentence_start + s3_obj.sentence_text
+        s4_obj = all_s.find { |s| s.sentence_start == "Because of that, "}
+        @s4 = s4_obj.sentence_start + s4_obj.sentence_text
+        s5_obj = all_s.find { |s| s.sentence_start == "Because of that, "}
+        @s5 = s5_obj.sentence_start + s5_obj.sentence_text
+        s6_obj = all_s.find { |s| s.sentence_start == "Until finally, "}
+        @s6 = s6_obj.sentence_start + s6_obj.sentence_text
+        s7_obj = all_s.find { |s| s.sentence_start == "In conclusion, "}
+        @s7 = s7_obj.sentence_start + s7_obj.sentence_text
     end
 
     def edit

@@ -22,7 +22,7 @@ class GamesController < ApplicationController
         teller.game_id = @game.id #@game.tellers = [id,id,id]
         #create story
         #once story created, passed story id into these sentences
-        #sentences are holding foreign keys, story _id and teller_id
+        #sentences are holding foreign keys, story_id and teller_id
         #pass in the story, have to figure out what players are coming in.
         s1 = Sentence.create(start:"Once upon a time, ", sentence_text: "")
         s2 = Sentence.create(start:"Every day, ", sentence_text: "")

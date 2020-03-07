@@ -9,7 +9,10 @@ Stories: <%= %><br>
 </div>
 
 <div>
-Sentences: <%= %><br>
+Sentences: <br>
+<% @teller.sentences do |s| %>
+    <%= s.sentence_text %>
+<% end %>
 </div>
 
 <br><br>
