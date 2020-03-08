@@ -13,14 +13,9 @@ class SentencesController < ApplicationController
 
     def edit
         @sentence = Sentence.find(params[:id])
-        # TODO: continue writing the logic for the route
     end
     
     def create
-        # sentence_params[:story_id] = params[:sentence][:story_id]
-        # sentence_params[:teller_id] = params[:sentence][:teller_id]
-        # sentence_params[:sentence_text] = params[:sentence][:sentence_text]
-        # sentence_params[:sentence_start] = params[:sentence][:sentence_start]
         Sentence.create(sentence_params)
     end
 

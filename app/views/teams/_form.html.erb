@@ -2,10 +2,12 @@
 
 <%= form_for @team do |f|%>
 Select tellers: <br><br>
-<%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username %><br>
+<div><%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username %></div>
 <br>
 <%= f.submit %><br>
 <%end%> <br>
+
+
 
 
 <% if flash[:message] %>

@@ -3,25 +3,25 @@
 <div>
 User name: <%= @teller.username %><br>
 </div>
-
-<div>
-Stories: <%= %><br>
-</div>
-
-<div>
-Sentences: <br>
-<% @teller.sentences do |s| %>
-    <%= s.sentence_text %>
-<% end %>
-</div>
-
 <br><br>
 <%= link_to "Edit your profile", edit_teller_path(@teller) %>
-
 <div>
 <% if @teller.id ==  session[:teller_id] %>
     <%= button_to 'DELETE', '/users/delete', method: :delete%>
     <%= button_to 'LOG OUT', '/logout', method: :logout%>
 <%end%>
 </div>
+<br />
+<div>
 
+Sentences from this teller: <br>
+<% @sentence_arr.each do |s| %>
+    <li><%= s %></li>
+<% end %>
+</div>
+
+
+<div>
+Stories from this teller: <br>
+
+</div>

@@ -2,6 +2,7 @@ header {
     justify-content: space-evenly;
     background: black;
     padding: 10px;
+    text-align: center;
     
     ul {
       margin: 0;
@@ -12,10 +13,14 @@ header {
       text-decoration: none;
       font-weight: bold;
       color: white;
+      padding: 50px;
+    }
+
+    a:hover {
+      background: gray;
     }
 
   }
-  
   
 
   .left-nav {
