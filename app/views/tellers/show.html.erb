@@ -14,14 +14,19 @@ User name: <%= @teller.username %><br>
 <br />
 <div>
 
-Sentences from this teller: <br>
+<div>
+<h3>Stories from teller <%= @teller.username %>:</h3>
+<% @story_id_array.each do |storyid| %>
+    <%= link_to storyid, story_path(storyid) %> ,
+<% end %>
+</div>
+
+
+
+<h3>Sentences from teller <%= @teller.username %>: <br></h3>
 <% @sentence_arr.each do |s| %>
     <li><%= s %></li>
 <% end %>
 </div>
 
 
-<div>
-Stories from this teller: <br>
-
-</div>

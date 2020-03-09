@@ -1,6 +1,7 @@
 <div><h1>3 RANDOM STORIES</h1>
 <div>
 Story <%= @id_1.to_s %><br>
+<ol>
 <%= @array_of_3_stories[0][0] %><br>
 <%= @array_of_3_stories[0][1] %><br>
 <%= @array_of_3_stories[0][2] %><br>
@@ -8,10 +9,12 @@ Story <%= @id_1.to_s %><br>
 <%= @array_of_3_stories[0][4] %><br>
 <%= @array_of_3_stories[0][5] %><br>
 <%= @array_of_3_stories[0][6] %><br>
+</ol>
 </div>
 <br><br>
 <div>
 Story <%= @id_2.to_s %><br>
+<ol>
 <%= @array_of_3_stories[1][0] %><br>
 <%= @array_of_3_stories[1][1] %><br>
 <%= @array_of_3_stories[1][2] %><br>
@@ -19,10 +22,12 @@ Story <%= @id_2.to_s %><br>
 <%= @array_of_3_stories[1][4] %><br>
 <%= @array_of_3_stories[1][5] %><br>
 <%= @array_of_3_stories[1][6] %><br>
+</ol>
 </div>
 <br><br>
 <div>
 Story <%= @id_3.to_s %><br>
+<ol>
 <%= @array_of_3_stories[2][0] %><br>
 <%= @array_of_3_stories[2][1] %><br>
 <%= @array_of_3_stories[2][2] %><br>
@@ -30,7 +35,14 @@ Story <%= @id_3.to_s %><br>
 <%= @array_of_3_stories[2][4] %><br>
 <%= @array_of_3_stories[2][5] %><br>
 <%= @array_of_3_stories[2][6] %><br>
+</ol>
 </div>
+
+<h1>ALL STORIES</h1>
+
+<% @stories.each do |story| %>
+    <%= link_to story.id, story_path(story.id) %> , 
+<% end %>
 
 
 

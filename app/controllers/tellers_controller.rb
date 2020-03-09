@@ -13,7 +13,7 @@ class TellersController < ApplicationController
         @teller = Teller.find(params[:id])
         @sentence_arr = @teller.sentences.map{|sentence| sentence.sentence_start + sentence.sentence_text}
         #find story_id belongs to this teller
-        story_id_array = @teller.sentences.map{|sentence| sentence.story_id}.uniq
+        @story_id_array = @teller.sentences.map{|sentence| sentence.story_id}.uniq
     end
 
     def edit

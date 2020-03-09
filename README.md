@@ -8,11 +8,11 @@ Fork and clone the repository. You will need to have Ruby and Rails installed on
 
 Open the directory in your terminal.
 
-Enter: bundle install to install the necessary gems.
+Enter: `bundle install` to install the necessary gems.
 
-Enter: rake db:migrate to create the database.
+Enter: `rails db:migrate` to create the database.
 
-Enter: rake db:seed to add intial data to the database.
+Enter: `rails db:seed` to add intial data to the database.
 
 
 ## 
