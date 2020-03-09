@@ -13,6 +13,7 @@ class StoriesController < ApplicationController
         @id_3 = id_of_3_stories[2]
         @array_of_3_stories = []
         id_of_3_stories.each do |id|
+            # @array_of_3_stories << sentences_array(id)
             all_s = Sentence.all.select {|sentence| sentence.story_id == id}
             puts all_s
             s1_obj = all_s.find { |s| s.sentence_start == "Once upon a time, "}

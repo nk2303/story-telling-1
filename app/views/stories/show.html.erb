@@ -1,6 +1,7 @@
 <h1>YOUR NEW STORY</h1>
 
 <% if @story.sentences.length == 7%>
+    <ol>
     <%= @s1 %><br>
     <%= @s2 %><br>
     <%= @s3 %><br>
@@ -8,6 +9,7 @@
     <%= @s5 %><br>
     <%= @s6 %><br>
     <%= @s7 %><br>
+    </ol>
 <% else %>
     <%= "Your story is incompleted. It will be deleted. Make sure to follow isntructions." %>
     <%= link_to "Create a story again", new_team_path %>
