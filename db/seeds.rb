@@ -26,6 +26,7 @@ st1 = Story.create
 st2 = Story.create
 st3 = Story.create
 
+cat = Category.create
 
 s_1a = Sentence.create(story_id: st1.id, teller_id: t1.id , sentence_start: "Once upon a time, ", sentence_text: "there was a volcano living all alone in the middle of the sea.")
 s_2a = Sentence.create(story_id: st1.id, teller_id: t2.id , sentence_start: "Every day, ", sentence_text: "he sang out loud this song of hope: I wish that the earth, sea, and the sky up above will send me someone to lava.")
@@ -49,4 +50,4 @@ s_3c = Sentence.create(story_id: st3.id, teller_id: t3.id , sentence_start: "One
 s_4c = Sentence.create(story_id: st3.id, teller_id: t1.id , sentence_start: "Because of that, ", sentence_text: "the candy bar look back." )
 s_5c = Sentence.create(story_id: st3.id, teller_id: t2.id , sentence_start: "And because of that, ", sentence_text: "the person eats the candy bar." )
 s_6c = Sentence.create(story_id: st3.id, teller_id: t3.id , sentence_start: "Until finally, ", sentence_text: "the candy bar is no longer scared(!?)")
-s_7c = Sentence.create(story_id: st3.id, teller_id: t1.id , sentence_start: "In conclusion, ", sentence_text: "don't be like a candy bar." )
+s_7c = Sentence.create(story_id: st3.id, teller_id: t1.id , sentence_start: "In conclusion, ", sentence_text: "don't read lame story like this." )

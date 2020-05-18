@@ -1,0 +1,2 @@
+class CategoryStoriesController < ApplicationController
+end

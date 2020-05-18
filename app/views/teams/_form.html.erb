@@ -1,21 +1,22 @@
 
+<div class="form-div">
 
-<%= form_for @team do |f|%>
-Select tellers: <br><br>
-<div><%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username %></div>
-<br>
-<%= f.submit %><br>
-<%end%> <br>
+        First, create a team ranging from two tellers to seven tellers. Who wanna join? <br><br>
+        
+            <%= form_for @team do |f|%>
+            Select 7 tellers or less: <br><br>
+            <%= f.collection_check_boxes :teller_ids, Teller.all, :id, :username do |b| %>
+            <div> <%= b.check_box %><%= b.label { b.text } %></div>
+            <% end %>
+            <br><br>
+            <%= f.submit %>
+            <%end%>
+        
 
-
-
-
-<% if flash[:message] %>
-<%= flash[:message] %>
-<% end %>
+        <% if flash[:message] %>
+        <%= flash[:message] %>
+        <% end %>
 
 </div>
-
-Teller not existed? <br>
-
-<%= link_to "New teller sign up", new_teller_path %>
+<br/><br/>
+Teller not existed? <%= link_to "New teller sign up", new_teller_path %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :category_stories
+  resources :categories
   resources :games
   resources :sentences
   resources :stories
