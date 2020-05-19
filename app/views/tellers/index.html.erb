@@ -1,13 +1,16 @@
-<div><h1>ALL TELLERS</h1><div>
+<div class="home-pg">    
+    <div>
+    <h1>ALL TELLERS</h1><div>
 
-<% @tellers.each do |teller| %>
-    <li>
-    <%= link_to teller.username, teller %>
-    </li>
-<% end %>
+    <% @tellers.each do |teller| %>
+        <li>
+        <%= link_to teller.username, teller %>
+        </li>
+    <% end %>
 
-<br><br>
-<div>
-Don't have a teller account?
-<%= link_to "Create a new account", new_teller_path%>
+    <br><br>
+    <div>
+    Don't have a teller account?
+    <%= link_to "Create a new account", new_teller_path%>
+    </div>
 </div>

@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+ .bg-img { background-image: url("./hinhanh.jpg");}

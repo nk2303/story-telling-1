@@ -1,32 +1,33 @@
-<div><h1>TELLER PROFILE</h1></div>
+<div class="home-pg">
+    <h1>TELLER PROFILE</h1>
 
-<div>
-User name: <%= @teller.username %><br>
+    <div>
+    Username: <%= @teller.username %><br>
+    </div>
+    <br><br>
+    <%= link_to "Edit your profile", edit_teller_path(@teller) %>
+    <div>
+    <% if @teller.id ==  session[:teller_id] %>
+        <%= button_to 'DELETE', '/users/delete', method: :delete%>
+        <%= button_to 'LOG OUT', '/logout', method: :logout%>
+    <%end%>
+    </div>
+    <br />
+    <div>
+
+    <div>
+    <h3>Stories from teller <%= @teller.username %>:</h3>
+    <% @story_id_array.each do |storyid| %>
+        <%= link_to storyid, story_path(storyid) %> ,
+    <% end %>
+    </div>
+
+
+
+    <h3>Sentences from teller <%= @teller.username %>: <br></h3>
+    <% @sentence_arr.each do |s| %>
+        <li><%= s %></li>
+    <% end %>
+    </div>
+
 </div>
-<br><br>
-<%= link_to "Edit your profile", edit_teller_path(@teller) %>
-<div>
-<% if @teller.id ==  session[:teller_id] %>
-    <%= button_to 'DELETE', '/users/delete', method: :delete%>
-    <%= button_to 'LOG OUT', '/logout', method: :logout%>
-<%end%>
-</div>
-<br />
-<div>
-
-<div>
-<h3>Stories from teller <%= @teller.username %>:</h3>
-<% @story_id_array.each do |storyid| %>
-    <%= link_to storyid, story_path(storyid) %> ,
-<% end %>
-</div>
-
-
-
-<h3>Sentences from teller <%= @teller.username %>: <br></h3>
-<% @sentence_arr.each do |s| %>
-    <li><%= s %></li>
-<% end %>
-</div>
-
-
