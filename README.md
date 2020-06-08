@@ -2,6 +2,8 @@
 
 Story Telling is a communication game that can be played anytime and anywhere by a group of people!
 
+![Image of account page for managing playlists](public/thumbnal_img.png)
+
 ## Instructions
 
 Fork and clone the repository. You will need to have Ruby and Rails installed on your device.
